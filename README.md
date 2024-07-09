@@ -10,7 +10,7 @@ This script reproduces a portion of Joshua Tenenbaum's [PhD thesis](https://dspa
 </p>
 
 - There are only three learning trials providing the numbers that are positive examples of a concept. A further set of numbers will then be judged as to whether they belong to the learned concept or not.
-- The model will first learn the concept from the training data, and then perorm the generalization task by predicting the probability that a particular number instantiates the same concept as the positive examples.
+- The model will first learn the concept from the training data, and then perform the generalization task by predicting the probability that a particular number instantiates the same concept as the positive examples.
 - Here are three training trials used during the model implementation:
   - Trial 1: [64]
   - Trial 2: [8, 2, 16, 64]
