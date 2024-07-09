@@ -22,7 +22,7 @@ This script reproduces a portion of Joshua Tenenbaum's [PhD thesis](https://dspa
     <img src="https://github.com/jkovinsky/number-game/assets/108347901/7b3a231c-e8e9-4fa2-b95e-4eb0206c722e" alt="Screenshot">
 </p>
 
-- Part II: For each learning trial, the script computes the posterior probability distribution and then plots the top 20 hypotheses with the highest probability distribution.
+- Part II: For each learning trial, the script computes the posterior probability distribution and then plots the top 20 hypotheses with the highest probability.
 - Part III: After learning the concept from the positive exemplars, the model makes generalization judgements for new numbers. The model uses hypothesis averaging to make the generalization judgement by computing the probability that each number between 1 and 100 instantiates the same concept as the positive examples provided in each trial. A bar graph is displayed to show the generalization judgements for each trial.
 <p align="center">
   <img src="https://github.com/jkovinsky/number-game/assets/108347901/c2182836-ab4e-45ea-a5bd-88ac888d752d"
