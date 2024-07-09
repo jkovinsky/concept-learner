@@ -14,7 +14,7 @@ This script reproduces a portion of Joshua Tenenbaum's [PhD thesis](https://dspa
 - Here are three training trials used during the model implementation:
   - Trial 1: [64]
   - Trial 2: [8, 2, 16, 64]
-  - Trial 3: [58, 64, 60, 72, 66]
+  - Trial 3: [48, 64, 60, 72, 66]
 
 **Script Format**
 - Part I: For each learning trial, the likelihood is computed using the size principle.
