@@ -3,7 +3,7 @@
 
 **Motivation**:  The basic setup is as follows: I give you a set of numbers from 1 to 100, and you try to guess another number in the set. For example, I give you the numbers {4,8,64,2}. Intuitively, you might say another number in the set is 16, because that's consistent with the concept that the set contains powers of 2. It could also be the case this example set contains only even numbers. Hence, predicting 24 or 92 would also be reasonable. We could also say the next number is 43, because the full underlying set is {4,8,64,2,43,57}, which would represent 6 uniform random draws from the range 1 to 100. How can we say with complete confidence what the next number in the set will be?
 
-**Experiment:**
+**Experimen**
 - The `learner.m` file contains the entire hypothesis space. This space includes 24 hypotheses for mathematical properties, 5050 hypthoses for raw magnitude range, and 10 hypotheses for approximate magnitude. Each type of hypothesis is assigned with 1/3 prior probability.
 <p align="center">
   <img src="https://github.com/jkovinsky/number-game/assets/108347901/c5fde537-e1ac-4857-97b5-7da73d9ba2ce">
