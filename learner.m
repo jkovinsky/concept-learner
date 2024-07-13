@@ -44,7 +44,7 @@ for i=1:100
 end;
 
 % Type 3: Approximate magnitude (10 hypotheses):
-% Decades (1-10, 10-20, 20-30, …)
+% Decades (1-10, 10-20, 20-30, â€¦)
 h{5075} = [1:10];
 h{5076} = [10:20];
 h{5077} = [20:30];
@@ -57,14 +57,11 @@ h{5083} = [80:90];
 h{5084} = [90:100];
 
 
-% input three learning trials
+% define three learning trials
+
+trials = {64, [8, 2, 16, 64], [48, 64, 60, 72, 66]}; % training data
 
 % compute prior probability for each h
-
-% Part a and Part b
-
-trials = {64, [8, 2, 16, 64], [48, 64, 60, 72, 66]};
-
 c = 1/3;
 mathProp_prior = c/24; % mathematical property
 rawMag_prior = c/5050; % raw magnitude
@@ -139,6 +136,7 @@ end
 [sort_trial1, pos_trial1] = (sort(posterior(:,1), 'descend'));
 Max20_trial1 = sort_trial1(1:20);
 
+% trial 1 
 figure('Name', 'Trial 1: [64]'); 
 bar(Max20_trial1);
 xticks(1:numel(Max20_trial1));
@@ -149,6 +147,7 @@ xlabel('Hypothesis');
 [sort_trial2, pos_trial2] = (sort(posterior(:,2), 'descend')); 
 Max20_trial2 = sort_trial2(1:20); 
 
+% trial 2
 figure('Name', 'Trial 2: [8, 2, 16, 64]');
 bar(Max20_trial2);
 xticks(1:numel(Max20_trial2));
@@ -159,6 +158,7 @@ xlabel('Hypothesis');
 [sort_trial3, pos_trial3] = (sort(posterior(:,3), 'descend')); 
 Max20_trial3 = sort_trial3(1:20);
 
+% trial 3
 figure('Name', 'Trial 3: [48, 64, 60, 72, 66]');
 bar(Max20_trial3);
 xticks(1:numel(Max20_trial3));
@@ -181,18 +181,23 @@ for i = 1:length(trials)
     end
 end
 
+% plot probability of each number 1-100 substantiating the learned concept
+
+% trial 1 judgement distribution
 figure('Name', 'Trial 1 Generalization: [64]');
 bar(hypo_avg(:,1));
 ylim([0, 1]);
 xlabel('Number');
 ylabel('Probability C');
 
+% trial 2 judgement distribution
 figure('Name', 'Trial 2 Generalization: [8, 2, 16, 64]');
 bar(hypo_avg(:,2));
 ylim([0, 1]);
 xlabel('Number');
 ylabel('Probability C');
 
+% trial 3 judgement distribution
 figure('Name', 'Trial 3 Generalization: [48, 64, 60, 72, 66]');
 bar(hypo_avg(:,3));
 ylim([0, 1]);
