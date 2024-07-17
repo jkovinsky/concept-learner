@@ -1,4 +1,4 @@
-# number-game
+# concept-learner
 **Summary**: This script reproduces a portion of Joshua Tenenbaum's [PhD thesis](https://dspace.mit.edu/handle/1721.1/16714), which illustrates some fundamental ideas about Bayesian concept learning. Given a sequence of numbers, it predicts the next best one without using traditional machine learning techniques. 
 
 **Motivation**:  The basic setup is as follows: I give you a set of numbers from 1 to 100, and you try to guess another number in the set. For example, I give you the numbers [4, 8, 64, 2]. Intuitively, you might say another number in the set is 16, because that's consistent with the concept that the set contains powers of 2. It could also be the case this example set contains only even numbers. Hence, predicting 24 or 92 would also be reasonable. We could also say the next number is 43, because the full underlying set is [4, 8, 64, 2, 43, 57], which would represent 6 uniform random draws from the range 1 to 100. How can we say with complete confidence what the next number in the set will be?
